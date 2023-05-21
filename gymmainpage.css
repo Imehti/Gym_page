@@ -1,0 +1,359 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:Georgia, 'Times New Roman', Times, serif    ;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(27, 25, 25, 0.459),rgba(17, 12, 12, 0.329)),url("gymmainpage.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.logo{
+    color: rgba(219, 202, 202, 0.822);
+    position: absolute;
+    right: 20px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    background-color: rgba(245, 6, 6, 0.219);
+}
+.nav_links{
+    flex: 1;
+    text-align: left;
+}
+.nav_links ul li{
+    list-style: none;
+    display: inline-block;
+    padding:10px ;
+    position: relative;
+}
+.nav_links ul li a{
+    color: rgb(201, 200, 200);
+    text-decoration: none;
+    font-size: 19px;
+    
+}
+.nav_links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #0a0a0a;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav_links ul li:hover::after{
+    width: 100%;
+}
+.text_box{
+    width: 80%;
+    color: aliceblue;
+    position: absolute;
+    top: 30%;
+    left: 4%;
+    text-align:left;
+}
+.text_box h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
+.text_box p{
+    margin: 40px;
+    padding-top: 17px;
+    padding-left: 8px;
+    margin-bottom: 0px;
+    color: rgb(165, 168, 172);
+    font-size: 14px;
+}
+.text_box h2{
+    font-size: 30px;
+    margin-left: 24px;
+    margin-top: -11px;
+}
+.text_box span{
+    color: rgb(252, 77, 77);
+}
+nav .fa{
+    display: none;
+}
+@media(max-width:700px){
+    .logo{
+        position: relative;
+        justify-content: center;
+        text-align: center;
+        left: 10px;
+        top: 14px;
+    }
+    nav{
+        background-color: rgba(0, 0, 0, 0.027);
+    }
+    .nav_links ul li{
+        display: block;
+    }
+    .nav_links{
+        position: absolute;
+        background: rgb(119, 7, 7);
+        height: 100vh;
+        width: 120px;
+        top: 0;
+        right:-150px;
+        text-align:left;
+        z-index: 2;
+        transition: 1s;
+
+    }
+    .nav_links ul li a{
+        color: rgb(255, 255, 255);
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+
+    }
+    #bars{
+      position: absolute;
+      right: 18px;
+      top:10px ;          
+    }
+}
+
+/*-----------Blog---------------*/
+.Blog{
+    background-color: rgba(143, 137, 137, 0.295);
+    width: 85%;
+    margin: auto;
+    text-align: center;
+    padding: 100px;
+}
+.Blog h1{
+    color: rgba(0, 141, 35, 0.699);
+    font-size: 34px;
+    font-weight: 600px;
+}
+p{
+    font-size: 15px;
+    font-weight: 300px;
+    line-height: 24px;
+    padding: 12px;
+}
+
+.row{
+    display: flex;
+    margin: 4%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.Blog_col{
+
+    position: relative;
+    left: -40px;
+    font-size: 28px;
+    margin-bottom: 4%;
+    padding: 71px 23px;
+
+}
+.Blog_img{        
+    display: flex;
+    flex-direction: column;
+    width: 59%;
+}
+.Blog_img img{
+    position: relative;
+    width: 290px;
+    height: 290px;
+    overflow: hidden;
+    margin-left: -50px;
+    top: 20px;
+    left: -63px;
+    border-radius:50%;
+}
+.second_row{
+    display: flex;
+    margin: 4%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 32px;
+
+}
+.second_Blog{
+    position: relative;
+    left: -40px;
+    font-size: 28px;
+    margin-bottom: 4%;
+    padding: 71px 23px;
+}
+.second_Blog_img{
+    display: flex;
+    flex-direction: column;
+    width: 59%;
+}
+.second_Blog_img img{
+    position: relative;
+    width: 290px;
+    height: 290px;
+    overflow: hidden;
+    margin-left: -50px;
+    top: 20px;
+    left: -63px;
+    border-radius:50%;
+}
+.third_row{
+    width: 100%;
+    display: flex;
+    margin: 4%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0px;
+
+}
+.third_Blog_img{
+    display: flex;
+    flex-direction: column;
+}
+.third_Blog_img img{
+    position: relative;
+    width: 290px;
+    height: 290px;
+    overflow: hidden;
+    margin-left: -50px;
+    top: 20px;
+    left: -63px;
+    border-radius:50%;
+}
+.third_Blog{
+    position: relative;
+    left: -40px;
+    font-size: 28px;
+    margin-bottom: 4%;
+    padding: 71px 23px;
+}
+.Blog p{
+    font-size: 18px;
+}
+@media(max-width:700px){
+    .main_row,.row,.second_row,.third_row{
+        flex-direction: column;
+    }
+
+    .Blog_img img{
+        position: relative;
+        width:200px;
+        height:200px;
+        top:150 px;
+        left:60px;
+        
+    }
+    .Blog_col{
+        position: relative;
+        left: -60px;
+        
+    }
+    .Blog_title{
+        position: relative;
+        right: 45px;
+    }
+    .second_Blog_img img{
+        position: relative;
+        width:200px;
+        height:200px;
+        left:60px;
+        top: -70px;
+        
+    }
+    .second_Blog{
+        position: relative;
+        left: -60px;
+        top: -90px;
+    }
+    .third_Blog_img img{
+        position: relative;
+        width:200px;
+        height:200px;
+        left:60px;
+        top: -120px;
+    }
+    .third_Blog{
+        position: relative;
+        left: -60px;
+        top: -120px;
+    }
+
+}
+
+/*-----------gallery---------------*/
+
+.gallery_section{
+    width: 85%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.gallery_title{
+    width: 70%;
+    margin: auto;
+    padding-top: 50px;
+    position: relative;
+}
+.gallery_title img{
+    width: 90%;
+    border-radius: 12px;
+}
+.gallery_title img:hover{
+    box-shadow: 2px 2px 18px 2px black;
+    transition: 0.7s;
+}
+.gallery_photos{
+    margin:44px;
+    margin-top: 50px;
+    float: left;
+    width: 250px;
+    height: 278px;
+    border: 5px solid rgba(100, 100, 100, 0.623) ;
+    border-radius: 7px;
+}
+.gallery_photos img{
+    width: 100%;
+    height:100% ;
+}
+.discreption{
+    padding: 14px;
+    text-align: center;
+}
+.gallery_section a{
+    text-decoration: none;
+    color: rgba(194, 1, 1, 0.808);
+}
+.gallery_section a:hover{
+    color: blue;
+    transition: 0.6s;
+}
+
+@media(max-width:700px){
+    .gallery_title img{
+        position: relative;
+        width: 120%;
+        right: 25px;
+    }
+    .gallery_photos{
+        position: relative;
+        width: 40%;
+        height:auto;
+        left: 94px;
+        border: 1px solid gray;
+        margin: 20px;
+        
+    }
+    .gallery_photos img{
+        position: relative;
+        height: 120px;
+    }
+}
